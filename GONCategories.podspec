@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.source_files  = 'Classes', 'Classes/**/*.{h,m}'
   s.exclude_files = 'Classes/Exclude'
   s.requires_arc = true
-  s.framework    = 'CoreData'
+  s.framework    = 'CoreData', 'StoreKit'
 end
