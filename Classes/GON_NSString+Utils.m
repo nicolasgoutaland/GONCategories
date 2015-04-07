@@ -6,6 +6,7 @@
 //
 
 #import "GON_NSString+Utils.h"
+#import "GON_NSMutableString+Utils.h"
 
 @implementation NSString(Utils)
 #pragma mark - Constructors
@@ -36,19 +37,19 @@
     return string;
 }
 
-- (BOOL)containsString:(NSString*)aString
+- (BOOL)containsString:(NSString*)string
 {
-	return [self rangeOfString:aString].location != NSNotFound;
+	return [self rangeOfString:string].location != NSNotFound;
 }
 
-- (BOOL)startsWithString:(NSString*)aString
+- (BOOL)startsWithString:(NSString*)string
 {
-	return [self rangeOfString:aString].location == 0;
+	return [self rangeOfString:string].location == 0;
 }
 
-- (BOOL)endsWithString:(NSString*)aString
+- (BOOL)endsWithString:(NSString*)string
 {
-	return [self rangeOfString:aString].location == (self.length - aString.length);	
+	return [self rangeOfString:string].location == (self.length - string.length);
 }
 
 - (NSString *)stringByTrimmingCharacters

@@ -6,6 +6,7 @@
 //
 
 #import "GON_NSArray+Utils.h"
+#import "GON_NSMutableArray+Utils.h"
 
 @implementation NSArray(Utils)
 #pragma mark - Shuffle
