@@ -7,6 +7,7 @@
 
 #import "GON_NSMutableString+Utils.h"
 #import "GON_NSString+Utils.h"
+#import "GON_NSDictionary+Utils.h"
 
 @implementation NSMutableString(Utils)
 #pragma mark - Utils
