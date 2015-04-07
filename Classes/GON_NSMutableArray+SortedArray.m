@@ -6,6 +6,7 @@
 //
 
 #import "GON_NSMutableArray+SortedArray.h"
+#import "GON_NSArray+SortedArray.h"
 #import <objc/message.h>
 
 @implementation NSMutableArray(SortedArray)
@@ -14,9 +15,9 @@ static NSComparisonResult cw_SelectorCompare(id a, id b, void* selector) {
     return (NSComparisonResult)(((id(*)(id, SEL, id))objc_msgSend)(a, (SEL)selector, b));
 }
 
-- (void)insertObject:(id)object sortedUsingFunction:(NSInteger (*)(id, id, void *))compare context:(void*)context;
+- (void)insertObject:(id)object sortedUsingFunction:(NSInteger (*)(id, id, void *))compare context:(void*)context
 {
-	NSUInteger index = [self indexForInsertingObject:anObject sortedUsingFunction:compare context:context];
+	NSUInteger index = [self indexForInsertingObject:object sortedUsingFunction:compare context:context];
 	[self insertObject:object atIndex:index];
 }
 

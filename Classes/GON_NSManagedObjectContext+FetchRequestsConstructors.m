@@ -18,7 +18,7 @@
     NSFetchRequest *req        = [[NSFetchRequest alloc] init];
 
     req.entity                 = [NSEntityDescription entityForName:entityName inManagedObjectContext:self];
-    req.predicate              = [NSPredicate predicateWithFormat:@"%K == %@", key, value]
+    req.predicate              = [NSPredicate predicateWithFormat:@"%K == %@", key, value];
     req.fetchLimit             = 1;
     req.returnsObjectsAsFaults = fault;
     
