@@ -6,6 +6,7 @@
 //
 
 #import "GON_NSMutableDictionary+SortedArray.h"
+#import "GON_NSMutableArray+SortedArray.h"
 
 @implementation NSMutableDictionary(SortedArray)
 #pragma mark - Sorted array
