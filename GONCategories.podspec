@@ -1,10 +1,11 @@
 Pod::Spec.new do |s|
-  s.name         = "GONMacros"
+  s.name         = "GONCategories"
   s.version      = "0.5"
   s.summary      = "Just a bunch of categories I wrote and I am using for years now"
   s.platform 	 = :ios, "7.0"
   s.description  = <<-DESC
-					Just a bunch of useful macros
+					Just a bunch of categories I wrote and I am using for years now.
+					Some may are pure syntactic sugar.
 					ARC only
                    DESC
 

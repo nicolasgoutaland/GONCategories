@@ -5,6 +5,10 @@
 //  Copyright 2015 Nicolas Goutaland. All rights reserved.
 //
 
+// NSMutableArray
+#import "GON_NSMutableArray+SortedArray.h"
+#import "GON_NSMutableArray+Utils.h"
+
 // NSArray
 #import "GON_NSArray+Utils.h"
 #import "GON_NSArray+SortedArray.h"
@@ -15,6 +19,11 @@
 
 // NSDate
 #import "GON_NSDate+Utils.h"
+
+// NSMutableDictionary
+#import "GON_NSMutableDictionary+Set.h"
+#import "GON_NSMutableDictionary+Array.h"
+#import "GON_NSMutableDictionary+SortedArray.h"
 
 // NSDictionary
 #import "GON_NSDictionary+Utils.h"
@@ -28,18 +37,6 @@
 // NSIndexPath
 #import "GON_NSIndexPath+Offset.h"
 
-// NSMutableArray
-#import "GON_NSMutableArray+SortedArray.h"
-#import "GON_NSMutableArray+Utils.h"
-
-// NSMutableDictionary
-#import "GON_NSMutableDictionary+Set.h"
-#import "GON_NSMutableDictionary+Array.h"
-#import "GON_NSMutableDictionary+SortedArray.h"
-
-// NSMutableString
-#import "GON_NSMutableString+Utils.h"
-
 // NSNotification
 #import "GON_NSNotification+Constructors.h"
 
@@ -48,6 +45,9 @@
 
 // NSObject
 #import "GON_NSObject+Block.h"
+
+// NSMutableString
+#import "GON_NSMutableString+Utils.h"
 
 // NSString
 #import "GON_NSString+Base64.h"
