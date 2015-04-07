@@ -6,6 +6,7 @@
 //
 
 #import "GON_UITextView+AttributedFitting.h"
+#import "GON_UIView+Frame.h"
 
 @implementation UITextView (AttributedFitting)
 #pragma mark - Static textview for view height computation (< iOS7.1)
@@ -28,7 +29,7 @@
 
 	// Update frame if needed
 	if (fitting)
-		return [self fitAttributedTextViewToDisplayText:aText];
+		return [self fitAttributedTextViewToDisplayText:text];
 
 	return CGRectGetHeight(self.frame);
 }
@@ -40,7 +41,7 @@
 	
 	// Update frame if needed
 	if (fitting)
-		return [self fitAttributedTextViewWidthToDisplayText:aText];
+		return [self fitAttributedTextViewWidthToDisplayText:text];
 	
 	return CGRectGetWidth(self.frame);
 }
@@ -52,7 +53,7 @@
 	self.attributedText = text;
 	
 	// Update frame
-    return [self fitAttributedTextView:aText
+    return [self fitAttributedTextView:text
                            toMaxHeight:height];
 }
 
@@ -62,7 +63,7 @@
 	self.attributedText = text;
     
 	// Update frame
-    return [self fitAttributedTextView:aText
+    return [self fitAttributedTextView:text
                             toMaxWidth:width];
 }
 
@@ -73,7 +74,7 @@
 	
 	// Update frame if needed
 	if (fitting)
-		return [self fitAttributedTextView:aText
+		return [self fitAttributedTextView:text
                                toMaxHeight:height];
     
 	return CGRectGetHeight(self.frame);
@@ -87,7 +88,7 @@
 	
 	// Update frame if needed
 	if (fitting)
-		return [self fitAttributedTextView:aText
+		return [self fitAttributedTextView:text
                                toMaxWidth:width];
     
 	return CGRectGetWidth(self.frame);
@@ -112,7 +113,7 @@
     // Compute width
     CGFloat width = [self computeTextViewWidth:maxWidth forText:text];
 
-    UPDATE_VIEW_FRAME_WIDTH(self, width);
+    [self updateFrameWidth:width];
 
     return width;
 }
@@ -122,7 +123,7 @@
     // Compute height
     CGFloat height = [self computeTextViewHeight:maxHeight forText:text];
 
-    UPDATE_VIEW_FRAME_HEIGHT(self, height);
+    [self updateFrameHeight:height];
 
     return height;
 }

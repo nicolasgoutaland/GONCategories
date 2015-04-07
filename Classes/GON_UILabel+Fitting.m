@@ -44,10 +44,10 @@
     return [self fitLabelToMaxHeight:height];
 }
 
-- (CGFloat)setText:(NSString*)aText fittingWithMaxWidth:(CGFloat)width
+- (CGFloat)setText:(NSString*)text fittingWithMaxWidth:(CGFloat)width
 {
     // Update text
-	self.text = aText;
+	self.text = text;
 
 	// Update frame
     return [self fitLabelToMaxWidth:width];
@@ -128,7 +128,7 @@
 	self.numberOfLines = 0;
     
 	// Define new bounds for the description label
-	CGRect aFrame = self.frame;
+	CGRect frame = self.frame;
 
     // IOS6 implementation
     
@@ -138,15 +138,15 @@
  lineBreakMode:self.lineBreakMode];
 */
 
-    CGSize size = [self.text boundingRectWithSize:CGSizeMake(aFrame.size.width, height)
+    CGSize size = [self.text boundingRectWithSize:CGSizeMake(frame.size.width, height)
                                           options:(NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin)
                                        attributes:@{NSFontAttributeName: self.font}
                                           context:NULL].size;
 
-	aFrame.size.height = MIN(ceil(size.height), height);
-	self.frame = aFrame;
+	frame.size.height = MIN(ceil(size.height), height);
+	self.frame = frame;
 	
-	return CGRectGetHeight(aFrame);
+	return CGRectGetHeight(frame);
 }
 
 @end
