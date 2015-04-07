@@ -77,7 +77,6 @@
 
 - (NSMutableString *)cleanHTMLEntities
 {
-#warning Evol : Use regex to extract HTML entities ?
     for (NSString *htmlEntity in [dicHTMLEntities allKeys])
     {
         [self replaceOccurrencesOfString:htmlEntity
@@ -91,7 +90,6 @@
 
 - (NSMutableString *)addHTMLEntities
 {
-#warning Evol : Use regex to extract HTML entities ?
     for (NSString *htmlEntity in [dicHTMLEntitiesInverted allKeys])
     {
         [self replaceOccurrencesOfString:htmlEntity
