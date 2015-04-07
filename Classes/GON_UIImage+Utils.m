@@ -6,6 +6,7 @@
 //
 
 #import "GON_UIImage+Utils.h"
+#import <ImageIO/ImageIO.h>
 
 @interface UIImage ()
 @end
@@ -16,7 +17,7 @@
 {
     // With CGImageSource we avoid loading the whole image into memory
     CGSize imageSize = CGSizeZero;
-    CGImageSourceRef source = CGImageSourceCreateWithURL((__bridge CFURLRef)anURL, NULL);
+    CGImageSourceRef source = CGImageSourceCreateWithURL((__bridge CFURLRef)url, NULL);
 
     if (source)
     {
@@ -63,7 +64,7 @@
 
 + (CGSize)sizeForImageAtPath:(NSString *)path
 {
-    return [self sizeForImageAtURL:[NSURL fileURLWithPath:aPath]];
+    return [self sizeForImageAtURL:[NSURL fileURLWithPath:path]];
 }
 
 #pragma mark - Utils
