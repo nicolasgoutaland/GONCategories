@@ -22,13 +22,58 @@ __GON_UIKitExtensions_All.h__ : Import all UIKit related categories<br/>
 __GON_StoreKitExtensions_All.h__ : Import all StoreKit related categories<br/>
 
 ### CoreData
+##GON_NSManagedObjectContext+Fetching
+##GON_NSManagedObjectContext+FetchRequestsConstructors
+##GON_NSManagedObjectContext+Utils
 
 ### Foundation
+##GON_NSArray+Utils
+##GON_NSArray+SortedArray
+##GON_NSData+Base64
+##GON_NSData+String
+##GON_NSDate+Utils
+##GON_NSDictionary+Utils
+##GON_NSFileManager+Utils
+##GON_NSHTTPURLResponse+Error
+##GON_NSIndexPath+Offset
+##GON_NSMutableArray+SortedArray
+##GON_NSMutableArray+Utils
+##GON_NSMutableDictionary+Set
+##GON_NSMutableDictionary+Array
+##GON_NSMutableDictionary+SortedArray
+##GON_NSMutableString+Utils
+##GON_NSNotification+Constructors
+##GON_NSNotificationCenter+MainThread
+##GON_NSObject+Block
+##GON_NSString+Base64
+##GON_NSString+MD5
+##GON_NSString+SQL
+##GON_NSString+Utils
+##GON_NSURL+Utils
+##GON_NSURL+Split
 
 ### UIKit
+##GON_UIColor+Utils
+##GON_UIControl+Utils
+##GON_UIDevice+Information
+##GON_UIImage+Colors
+##GON_UIImage+Utils
+##GON_UILabel+AttributedFitting
+##GON_UILabel+Fitting
+##GON_UINavigationController+Utils
+##GON_UITableView+Reload
+##GON_UITableView+Cells
+##GON_UIView+Bounds
+##GON_UIView+Fitting
+##GON_UIView+Frame
+##GON_UIView+Utils
+##GON_UIViewController+Utils
+##GON_UIScrollView+Fitting
+##GON_UITextView+Fitting
+##GON_UITextView+AttributedFitting
 
 ### StoreKit
-
+##GON_SKProduct+Utils
 
 ##Versions
 0.5   : Initial release<br/>
