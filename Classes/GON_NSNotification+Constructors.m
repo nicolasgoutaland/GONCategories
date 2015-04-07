@@ -9,7 +9,7 @@
 
 @implementation NSNotification(Constructors)
 #pragma mark - Constructors
-+ (NSNotification*)notificationWithName:(NSString *)aName object:(id)notificationSender withObject:(id)anObject forKey:(id)key
++ (NSNotification*)notificationWithName:(NSString *)name object:(id)notificationSender withObject:(id)object forKey:(id)key
 {
 	NSDictionary *userInfo = [NSDictionary dictionaryWithObject:object
 														 forKey:key];
