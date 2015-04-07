@@ -20,7 +20,7 @@
 
 - (BOOL)hasError
 {
-    NSInteger centaineCode = httpCode / 100;
+    NSInteger centaineCode = self.statusCode / 100;
     
     return !(centaineCode == 1 ||
              centaineCode == 2 ||

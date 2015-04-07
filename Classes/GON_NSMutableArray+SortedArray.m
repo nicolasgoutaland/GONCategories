@@ -10,8 +10,8 @@
 
 @implementation NSMutableArray(SortedArray)
 #pragma mark - SortedArray
-static NSComparisonResult cw_SelectorCompare(id a, id b, void* aSelector) {
-	return (NSComparisonResult)objc_msgSend(a, (SEL)aSelector, b);
+static NSComparisonResult cw_SelectorCompare(id a, id b, void* selector) {
+    return (NSComparisonResult)(((id(*)(id, SEL, id))objc_msgSend)(a, (SEL)aSelector, b));
 }
 
 - (void)insertObject:(id)object sortedUsingFunction:(NSInteger (*)(id, id, void *))compare context:(void*)context;
