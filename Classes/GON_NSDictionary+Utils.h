@@ -24,5 +24,5 @@
 - (BOOL)hasKey:(NSString *)key;
 
 /* Return a deep mutable copy */
-- (NSMutableArray *)mutableCopyDeep;
+- (NSMutableDictionary *)mutableCopyDeep;
 @end
