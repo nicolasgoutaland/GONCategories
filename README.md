@@ -117,6 +117,9 @@ __GON_StoreKitExtensions_All.h__ : Import all StoreKit related categories<br/>
  */
 - (NSArray *)valuesForKey:(id)key;
 
+/* Return a deep mutable copy */
+- (NSMutableArray *)mutableCopyDeep;
+
 @property (nonatomic, readonly) NSRange range; // Return the range of the array (0, count)
 ```
 ###GON_NSArray+SortedArray
@@ -209,6 +212,9 @@ __GON_StoreKitExtensions_All.h__ : Import all StoreKit related categories<br/>
 
 /* Check if dictionary has given key */
 - (BOOL)hasKey:(NSString *)key;
+
+/* Return a deep mutable copy */
+- (NSMutableArray *)mutableCopyDeep;
 ```
 
 ###GON_NSFileManager+Utils

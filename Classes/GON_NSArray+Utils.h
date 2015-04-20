@@ -23,5 +23,8 @@
  */
 - (NSArray *)valuesForKey:(id)key;
 
+/* Return a deep mutable copy */
+- (NSMutableArray *)mutableCopyDeep;
+
 @property (nonatomic, readonly) NSRange range; // Return the range of the array (0, count)
 @end

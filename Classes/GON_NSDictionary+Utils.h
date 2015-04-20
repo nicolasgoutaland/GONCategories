@@ -22,4 +22,7 @@
 
 /* Check if dictionary has given key */
 - (BOOL)hasKey:(NSString *)key;
+
+/* Return a deep mutable copy */
+- (NSMutableArray *)mutableCopyDeep;
 @end

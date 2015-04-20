@@ -9,6 +9,12 @@
 #import "GON_NSMutableArray+Utils.h"
 
 @implementation NSArray(Utils)
+#pragma mark - Copy
+- (NSMutableArray *)mutableCopyDeep
+{
+    return (NSMutableArray *)CFBridgingRelease(CFPropertyListCreateDeepCopy(kCFAllocatorDefault, (CFArrayRef)self, kCFPropertyListMutableContainers));
+}
+
 #pragma mark - Shuffle
 - (NSArray*)shuffledArray
 {

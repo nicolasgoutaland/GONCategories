@@ -8,6 +8,12 @@
 #import "GON_NSDictionary+Utils.h"
 
 @implementation NSDictionary(Utils)
+#pragma mark - Copy
+- (NSMutableDictionary *)mutableCopyDeep
+{
+    return (NSMutableDictionary *)CFBridgingRelease(CFPropertyListCreateDeepCopy(kCFAllocatorDefault, (CFArrayRef)self, kCFPropertyListMutableContainers));
+}
+
 #pragma mark - Utils
 - (id)objectForKeyOrNil:(id)key
 {
