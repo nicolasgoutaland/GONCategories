@@ -16,10 +16,7 @@
 // towards smaller numbers in the range.)
 static NSUInteger random_below(NSUInteger n) 
 {
-    if (arc4random_uniform != NULL)
-        return arc4random_uniform ((u_int32_t)n);
-
-    return (arc4random() % n);
+    return arc4random_uniform ((u_int32_t)n);
 }
 
 @implementation NSMutableArray(Utils)
