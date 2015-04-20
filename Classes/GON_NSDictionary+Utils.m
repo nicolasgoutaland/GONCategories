@@ -11,7 +11,7 @@
 #pragma mark - Copy
 - (NSMutableDictionary *)mutableCopyDeep
 {
-    return (NSMutableDictionary *)CFBridgingRelease(CFPropertyListCreateDeepCopy(kCFAllocatorDefault, (CFArrayRef)self, kCFPropertyListMutableContainers));
+    return (NSMutableDictionary *)CFBridgingRelease(CFPropertyListCreateDeepCopy(kCFAllocatorDefault, (CFDictionaryRef)self, kCFPropertyListMutableContainers));
 }
 
 #pragma mark - Utils
