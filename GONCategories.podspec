@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GONCategories"
-  s.version      = "0.5.1"
+  s.version      = "0.5.2"
   s.summary      = "Just a bunch of categories I wrote and I am using for years now"
   s.platform 	 = :ios, "7.0"
   s.description  = <<-DESC

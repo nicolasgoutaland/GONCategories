@@ -56,7 +56,7 @@
     for (id obj in self)
     {
         // Retrieve key
-        key = [obj valueForKey:valueForKey];
+        key = [obj valueForKeyPath:valueForKey];
 
         // If a key is available, store object
         if (key)
