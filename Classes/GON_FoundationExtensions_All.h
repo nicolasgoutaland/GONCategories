@@ -50,7 +50,7 @@
 
 // NSString
 #import "GON_NSString+Base64.h"
-#import "GON_NSString+MD5.h"
+#import "GON_NSString+Crypto.h"
 #import "GON_NSString+SQL.h"
 #import "GON_NSString+Utils.h"
 

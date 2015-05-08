@@ -421,13 +421,19 @@ __GON_StoreKitExtensions_All.h__ : Import all StoreKit related categories<br/>
 - (NSData *)dataFromBase64String;
 ```
 
-###GON_NSString+MD5
+###GON_NSString+Crypto
 ```
+/* Return hashed SHA256 string */
+- (NSString *)SHA256;
+
+/* Return hashed SHA256 base on string converted to utf16 */
+- (NSString *)utf16SHA256;
+
 /* Return hashed MD5 string */
 - (NSString *)MD5;
 
-/* Return hashed MD5 base on string converted to unicode */
-- (NSString *)unicodeMD5;
+/* Return hashed MD5 base on string converted to utf16 */
+- (NSString *)utf16MD5;
 ```
 
 ###GON_NSString+SQL
