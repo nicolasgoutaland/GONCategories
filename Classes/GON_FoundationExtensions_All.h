@@ -24,6 +24,9 @@
 #import "GON_NSMutableDictionary+Array.h"
 #import "GON_NSMutableDictionary+SortedArray.h"
 
+// NSNumber
+#import "GON_NSNumber+Compare.h"
+
 // NSDictionary
 #import "GON_NSDictionary+Utils.h"
 

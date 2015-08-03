@@ -415,6 +415,19 @@ __GON_StoreKitExtensions_All.h__ : Import all StoreKit related categories<br/>
 - (void)performBlockOnQueue:(dispatch_queue_t)queue afterDelay:(NSTimeInterval)delay block:(void (^)(void))block;
 ```
 
+###GON_NSNumber+Compare
+```
+/* Return bigger number between self and other number. Like MAX, for NSNumber.
+* If equals, return self.
+*/
+- (NSNumber *)biggerNumber:(NSNumber *)anotherNumber;
+
+/* Return smallest number between self and other number. Like MIN, for NSNumber
+* If equals, return self.
+*/
+- (NSNumber *)smallerNumber:(NSNumber *)anotherNumber;
+```
+
 ###GON_NSString+Base64
 ```
 /* Return data from string, assuming that's a base 64 encoded one */
