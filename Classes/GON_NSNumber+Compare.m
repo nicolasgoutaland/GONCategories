@@ -11,17 +11,25 @@
 #pragma mark - Utils
 - (NSNumber *)biggerNumber:(NSNumber *)anotherNumber
 {
-    if ([self compare:anotherNumber] != NSOrderedAscending)
+    NSNumber *rightOperand = anotherNumber;
+    if (!rightOperand)
+        rightOperand = @(0);
+    
+    if ([self compare:rightOperand] != NSOrderedAscending)
         return self;
     
-    return anotherNumber;
+    return rightOperand;
 }
 
 - (NSNumber *)smallerNumber:(NSNumber *)anotherNumber
 {
-    if ([self compare:anotherNumber] != NSOrderedDescending)
+    NSNumber *rightOperand = anotherNumber;
+    if (!rightOperand)
+        rightOperand = @(0);
+    
+    if ([self compare:rightOperand] != NSOrderedDescending)
         return self;
     
-    return anotherNumber;
+    return rightOperand;
 }
 @end
