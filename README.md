@@ -199,6 +199,9 @@ __GON_StoreKitExtensions_All.h__ : Import all StoreKit related categories<br/>
 /* Same as objectForKey:, but returning nil if object is [NSNull null] */
 - (id)objectForKeyOrNil:(id)key;
 
+/* Same as objectForKeyOrNil:, but return defaultValue instead of nil if no value found */
+- (id)objectForKeyOrNil:(id)key defaultValue:(id)defaultValue;
+
 /* Same as objectForKey:, but return defaultValue instead of nil if no value found */
 - (id)objectForKey:(id)key defaultValue:(id)defaultValue;
 

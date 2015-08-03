@@ -23,6 +23,15 @@
 	return obj;
 }
 
+- (id)objectForKeyOrNil:(id)key defaultValue:(id)defaultValue
+{
+	id obj = [self objectForKeyOrNil:key];
+	if (!obj)
+		return defaultValue;
+
+	return obj;
+}
+
 - (id)objectForKey:(id)key defaultValue:(id)defaultValue
 {
 	id obj = [self objectForKey:key];
