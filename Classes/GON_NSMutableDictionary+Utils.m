@@ -11,10 +11,10 @@
 #pragma mark - Utils
 - (void)setObjectOrNull:(id)object forKey:(id)key
 {
-    if (!obj)
+    if (!object)
         [self setObject:[NSNull null] forKey:key];
     else
-        [self setObject:obj forKey:key];
+        [self setObject:object forKey:key];
 }
 
 @end
