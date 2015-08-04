@@ -23,6 +23,7 @@
 #import "GON_NSMutableDictionary+Set.h"
 #import "GON_NSMutableDictionary+Array.h"
 #import "GON_NSMutableDictionary+SortedArray.h"
+#import "GON_NSMutableDictionary+Utils.h"
 
 // NSNumber
 #import "GON_NSNumber+Compare.h"
