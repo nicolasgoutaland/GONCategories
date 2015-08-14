@@ -7,3 +7,9 @@
 #import "GON_NSManagedObjectContext+Fetching.h"
 #import "GON_NSManagedObjectContext+FetchRequestsConstructors.h"
 #import "GON_NSManagedObjectContext+Utils.h"
+
+#import "GON_NSManagedObject+FetchedResultsControllerConstructors.h"
+#import "GON_NSManagedObject+FetchRequestConstructors.h"
+#import "GON_NSManagedObject+PropertyDescription.h"
+#import "GON_NSManagedObject+PropertyExtraction.h"
+#import "GON_NSManagedObject+SortDescriptors.h"

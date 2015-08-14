@@ -97,6 +97,94 @@ __GON_StoreKitExtensions_All.h__ : Import all StoreKit related categories<br/>
 - (void)deleteObjects:(id <NSFastEnumeration>)objects;
 ```
 
+###GON_NSManagedObject+SortDescriptors.h
+```
+/* Must be implemented in subclasses to provide an array of NSSortDescriptors used in fetch request */
++ (NSArray *)sortDescriptors;
+```
+
+###GON_NSManagedObject+PropertyExtraction.h
+```
+@interface NSManagedObject (PropertyExtraction)
+/* Return an array of dictionaries containing values for asked properties names.
+* Request is executed on class entity
+*/
++ (NSArray *)valuesForProperties:(NSArray *)propertiesNames usingPredicate:(NSPredicate *)predicate managedObjectContext:(NSManagedObjectContext *)context;
+
+/* Return an array of values for asked property name
+* Request is executed on class entity */
++ (NSArray *)valuesForProperty:(NSString *)propertyName usingPredicate:(NSPredicate *)predicate managedObjectContext:(NSManagedObjectContext *)context;
+```
+
+###GON_NSManagedObject+PropertyDescription.h
+```
+/* Return NSPropertyDescription for current entity, describing given attribute name */
++ (NSPropertyDescription*)propertyDescriptionForAttribute:(NSString*)attributeName inManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Return an array of NSPropertyDescription for current entity, describing given attributes name */
++ (NSArray *)propertiesDescriptionForAttributes:(NSArray*)attributesName inManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Return NSEntityDescription for current entity */
++ (NSEntityDescription*)entityDescription:(NSManagedObjectContext*)moc;
+```
+
+###GON_NSManagedObject+FetchRequestConstructors.h
+```
+/* Create fetch request to fetch one object using given key and value. Usefull to fetch objects on their uid key  */
++ (NSFetchRequest*)fetchRequestUsingValue:(id)value forKey:(NSString*)key returningAsFault:(BOOL)fault forManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Create fetch request to fetch one object using given predicate 
+*/
++ (NSFetchRequest*)fetchRequestUsingPredicate:(NSPredicate*)predicate returningAsFault:(BOOL)fault forManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Create fetch request to fetch all objects for given entity.
+*/
++ (NSFetchRequest*)fetchRequestForAllEntitiesReturningAsFault:(BOOL)fault forManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Create fetch request to fetch all objects using given predicate
+*/
++ (NSFetchRequest*)fetchRequestForAllEntitiesUsingPredicate:(NSPredicate*)predicate returningAsFault:(BOOL)fault forManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Create fetch request to fetch all objects for given entity and sort them.
+*/
++ (NSFetchRequest*)fetchRequestForAllEntitiesUsingSortDescriptors:(NSArray*)sortDescriptors returningAsFault:(BOOL)fault forManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Create fetch request to fetch all objects for given entity, using predicate and sort them.
+*/
++ (NSFetchRequest*)fetchRequestForAllEntitiesUsingPredicate:(NSPredicate*)predicate usingSortDescriptors:(NSArray*)sortDescriptors returningAsFault:(BOOL)fault forManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Create fetch request to fetch all objects for given entity. Class default sort descriptors are set.
+* You have to add a + (NSArray *)sortDescriptors method in your entity class to provide your own sort descriptors
+*/
++ (NSFetchRequest*)fetchRequestForAllSortedEntitiesReturningAsFault:(BOOL)fault forManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Create fetch request to fetch all objects using given predicate. Class default sort descriptors are set.
+* You have to add a + (NSArray *)sortDescriptors method in your entity class to provide your own sort descriptors
+*/
++ (NSFetchRequest*)fetchRequestForAllSortedEntitiesUsingPredicate:(NSPredicate*)predicate returningAsFault:(BOOL)fault forManagedObjectContext:(NSManagedObjectContext*)moc;
+```
+
+###GON_NSManagedObject+FetchedResultsControllerConstructors.h
+```
+/* Return a configured FetchedResultsController */
++ (NSFetchedResultsController*)fetchedResultsControllerForFetchRequest:(NSFetchRequest*)fetchRequest delegate:(id <NSFetchedResultsControllerDelegate>)delegate usingManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Return a configured FetchedResultsController using given cache */
++ (NSFetchedResultsController*)fetchedResultsControllerForFetchRequest:(NSFetchRequest*)fetchRequest cache:(NSString*)cache delegate:(id <NSFetchedResultsControllerDelegate>)delegate usingManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Return a configured FetchedResultsController using given section name */
++ (NSFetchedResultsController*)fetchedResultsControllerForFetchRequest:(NSFetchRequest*)fetchRequest sectionName:(NSString*)sectionName delegate:(id <NSFetchedResultsControllerDelegate>)delegate usingManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Return a configured FetchedResultsController using given cache and section name */
++ (NSFetchedResultsController*)fetchedResultsControllerForFetchRequest:(NSFetchRequest*)fetchRequest cache:(NSString*)cache sectionName:(NSString*)sectionName delegate:(id <NSFetchedResultsControllerDelegate>)delegate usingManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Return a configured FetchedResultsController using a generated cache name */
++ (NSFetchedResultsController*)fetchedResultsControllerCachedForFetchRequest:(NSFetchRequest*)fetchRequest delegate:(id <NSFetchedResultsControllerDelegate>)delegate usingManagedObjectContext:(NSManagedObjectContext*)moc;
+
+/* Return a configured FetchedResultsController using a generated cache name and given section name */
++ (NSFetchedResultsController*)fetchedResultsControllerCachedForFetchRequest:(NSFetchRequest*)fetchRequest sectionName:(NSString*)sectionName delegate:(id <NSFetchedResultsControllerDelegate>)delegate usingManagedObjectContext:(NSManagedObjectContext*)moc;
+``
+
 ##Foundation
 ###GON_NSArray+Utils
 ```
