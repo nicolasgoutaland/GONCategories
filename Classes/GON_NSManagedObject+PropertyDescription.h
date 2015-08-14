@@ -4,7 +4,7 @@
 //  Created by Nicolas Goutaland on 14/08/15.
 //  Copyright (c) 2015 Nicolas Goutaland. All rights reserved.
 //
-
+#import <CoreData/CoreData.h>
 
 @interface NSManagedObject (PropertyDescription)
 /* Return NSPropertyDescription for current entity, describing given attribute name */
