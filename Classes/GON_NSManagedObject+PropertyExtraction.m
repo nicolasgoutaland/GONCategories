@@ -7,6 +7,7 @@
 
 
 #import "GON_NSManagedObject+PropertyExtraction.h"
+#import "GON_NSManagedObject+PropertyDescription.h"
 
 @implementation NSManagedObject (PropertyExtraction)
 #pragma mark PropertyExtraction
