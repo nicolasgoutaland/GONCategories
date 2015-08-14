@@ -7,6 +7,7 @@
 
 
 #import "GON_NSManagedObject+FetchRequestConstructors.h"
+#import "GON_NSManagedObject+SortDescriptors.h"
 
 @implementation NSManagedObject(FetchRequestConstructors)
 #pragma mark Fecth requests constructors
@@ -83,10 +84,10 @@
     // Create request
 	NSFetchRequest *req = [[NSFetchRequest alloc] init];
 	
-	req.entity = ENTITY_DESCRIPTION([self description], moc);
-	req.sortDescriptors = sortDescriptors;
-    req.predicate = predicate;
-	req.returnsObjectsAsFaults = fault;
+    req.entity                 = [NSEntityDescription entityForName:[self description] inManagedObjectContext:moc];
+    req.sortDescriptors        = sortDescriptors;
+    req.predicate              = predicate;
+    req.returnsObjectsAsFaults = fault;
     
 	return req;
 }

@@ -6,6 +6,7 @@
 //
 
 #import "GON_NSManagedObject+PropertyDescription.h"
+#import "GON_NSManagedObject+PropertyDescription.h"
 
 @implementation NSManagedObject (PropertyDescription)
 #pragma mark PropertyDescription
