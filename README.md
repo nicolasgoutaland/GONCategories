@@ -7,7 +7,7 @@ If so, do not hesitate to tell me, I will update headers to add the original sou
 Simply call method you want to use with appropriate parameters.
 
 ##Installation
-__Cocoapods__: `pod 'GONCategories'`<br/>
+__CocoaPods__: `pod 'GONCategories'`<br/>
 __Manual__: Copy the __Classes__ folder in your project<br/>
 
 Import wanted headers in your project. .pch is a good place ;)<br/>
