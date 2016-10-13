@@ -26,7 +26,7 @@
 {
     NSMutableString *output = [NSMutableString string];
     const unsigned char* source = (const unsigned char *)[self UTF8String];
-    NSUInteger sourceLen = strlen((const char *)source);
+    NSUInteger sourceLen = (NSUInteger)strlen((const char *)source);
     for (NSUInteger i = 0; i < sourceLen; ++i) {
         const unsigned char thisChar = source[i];
         if (thisChar == ' '){
