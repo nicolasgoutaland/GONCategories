@@ -25,7 +25,7 @@
     for (NSString *value in values)
     {
         // Ensure that value will be a string
-        valueStr = [[value description] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        valueStr = [[value description] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 
         if ((computedURLStr.length + valueStr.length + separatorLength) < maxLength)
         {
@@ -70,7 +70,7 @@
     for (id value in values)
     {
         // Ensure that value will be a string
-        valueStr = [[value description] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        valueStr = [[value description] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 
         if ((computedURLStr.length + valueStr.length + separatorLength) < maxLength)
         {
