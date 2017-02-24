@@ -56,7 +56,7 @@
 
 - (BOOL)endsWithString:(NSString*)string
 {
-	return [self rangeOfString:string].location == (self.length - string.length);
+	return [self rangeOfString:string options:NSBackwardsSearch].location == (self.length - string.length);
 }
 
 - (NSString *)stringByTrimmingCharacters
